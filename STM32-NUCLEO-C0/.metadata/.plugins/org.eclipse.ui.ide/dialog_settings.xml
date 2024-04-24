@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\choua\OneDrive - 國立台灣大學\MakeCutter\MakeCutter_ST\STM32-NUCLEO-C0\unit_test\Core"/>
 			<item value="C:\Users\choua\OneDrive - 國立台灣大學\MakeCutter\MakeCutter_ST\STM32-NUCLEO-C0\unit_test"/>
 		</list>
 	</section>

@@ -1,0 +1,7 @@
+TIM16: 
+prescaler: 479 (freq = 48*10^6/480 = 100000, then 10 micros per count)
+counter period: 10000 (reload per 10000 count = 100 millis)
+channel1 disabled
+global interrupt
+
+
