@@ -6,7 +6,8 @@
 #define DELAY 1 //Each step will consume DELAY*2 milliseconds
 #define STEPS 3200 //one revolution if sixteenth precision
 
-void setup() {
+void setup() 
+{
   pinMode(DIR_PIN, OUTPUT);
   pinMode(STEP_PIN, OUTPUT);
   pinMode(MS_PIN_1, OUTPUT);
