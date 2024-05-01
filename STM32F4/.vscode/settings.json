@@ -1,0 +1,8 @@
+{
+    "stm32-for-vscode.openOCDPath": false,
+    "stm32-for-vscode.armToolchainPath": false,
+    "files.associations": {
+        "ssd1306.h": "c",
+        "stdint.h": "c"
+    }
+}
