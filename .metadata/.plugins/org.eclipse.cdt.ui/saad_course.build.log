@@ -1,0 +1,10 @@
+02:54:49 **** Incremental Build of configuration Debug for project saad_course ****
+make -j12 all 
+arm-none-eabi-size  saad_course.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20956	     40	   2264	  23260	   5adc	saad_course.elf
+Finished building: default.size.stdout
+ 
+
+02:54:50 Build Finished. 0 errors, 0 warnings. (took 350ms)
+

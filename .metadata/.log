@@ -1,0 +1,48 @@
+!SESSION 2024-04-26 01:17:11.689 -----------------------------------------------
+eclipse.buildId=Version 1.14.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-04-26 01:18:36.716
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-04-26 01:18:36.733
+!MESSAGE Log4j2 initialized with config file C:\Users\choua\STM32CubeIDE\MakeCutter_ST\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-26 01:18:41.855
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-04-26 01:20:51.748
+!MESSAGE Indexed 'saad_course' (26 sources, 127 headers) in 7.13 sec: 14,350 declarations; 80,975 references; 1 unresolved inclusions; 66 syntax errors; 240 unresolved names (0.25%)
+!SESSION 2024-04-28 23:01:35.659 -----------------------------------------------
+eclipse.buildId=Version 1.14.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-04-28 23:02:15.854
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-04-28 23:02:15.874
+!MESSAGE Log4j2 initialized with config file C:\Users\choua\STM32CubeIDE\MakeCutter_ST\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-04-28 23:02:30.025
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-05-02 15:36:25.639 -----------------------------------------------
+eclipse.buildId=Version 1.14.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-02 16:03:00.672
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-02 16:03:00.683
+!MESSAGE Log4j2 initialized with config file C:\Users\choua\STM32CubeIDE\MakeCutter_ST\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-02 16:03:11.770
+!MESSAGE Started RMI Server, listening on port 41337

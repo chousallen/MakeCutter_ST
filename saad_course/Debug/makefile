@@ -60,8 +60,8 @@ all: main-build
 main-build: saad_course.elf secondary-outputs
 
 # Tool invocations
-saad_course.elf saad_course.map: $(OBJS) $(USER_OBJS) C:\Users\choua\STM32CubeIDE\workspace_1.14.1\saad_course\STM32C031C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "saad_course.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\choua\STM32CubeIDE\workspace_1.14.1\saad_course\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="saad_course.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+saad_course.elf saad_course.map: $(OBJS) $(USER_OBJS) C:\Users\choua\STM32CubeIDE\MakeCutter_ST\saad_course\STM32C031C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "saad_course.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\saad_course\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="saad_course.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
