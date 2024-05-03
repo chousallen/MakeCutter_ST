@@ -1,6 +1,6 @@
-TIM16: 
-prescaler: 4799 (freq = 48*10^6/4800 = 10000, then 100 micros per count)
-counter period: 30000 (reload per 60000 count = 6 sec)
+TIM14: 
+prescaler: 47 (freq = 48*10^6/48 = 1000000, then 1 micros per count)
+counter period: 100 (reload per 100 count = 100 microsec)
 channel1 disabled
 global interrupt
 

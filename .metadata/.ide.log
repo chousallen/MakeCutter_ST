@@ -1,5 +1,103 @@
-2024-05-02 16:03:01,038 [INFO] Activator:176 - 
+2024-05-03 01:11:03,267 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-05-03 01:11:58,955 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 638392176 Bytes (1073741824)
+2024-05-03 01:11:59,056 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 650866448 Bytes (1073741824)
+2024-05-03 01:11:59,524 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 678769008 Bytes (1073741824)
+2024-05-03 01:11:59,737 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-03 01:11:59,738 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-05-03 01:11:59,738 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8C0
+2024-05-03 01:11:59,738 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8C0
+2024-05-03 01:11:59,738 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-03 01:11:59,738 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DEBUG
+2024-05-03 01:11:59,739 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-03 01:11:59,739 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-03 01:11:59,739 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-03 01:11:59,740 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-05-03 01:11:59,780 [WARN] IP:2119 - FIFOMode not found: check if there is a RefParameter without a condition.
+2024-05-03 01:11:59,780 [WARN] IP:2119 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2024-05-03 01:11:59,780 [WARN] IP:2119 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2024-05-03 01:11:59,780 [WARN] IP:2119 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-05-03 01:11:59,879 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\license.tmp_save
+2024-05-03 01:12:00,002 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\license.tmp
+2024-05-03 01:12:00,087 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\gpio.tmp_save
+2024-05-03 01:12:00,296 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\gpio.tmp
+2024-05-03 01:12:00,384 [WARN] IPConfigManager:99 - WARNING: Missing Config File for DEBUG ip!!
+2024-05-03 01:12:00,718 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\cortex.tmp_save
+2024-05-03 01:12:00,865 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\cortex.tmp
+2024-05-03 01:12:00,903 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\stm32c0xx_it.c_save
+2024-05-03 01:12:01,165 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\stm32c0xx_it.c
+2024-05-03 01:12:01,183 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\stm32c0xx_it.h_save
+2024-05-03 01:12:01,242 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\stm32c0xx_it.h
+2024-05-03 01:12:01,299 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\stm32c0xx_hal_msp.c_save
+2024-05-03 01:12:01,443 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\stm32c0xx_hal_msp.c
+2024-05-03 01:12:01,448 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\system.tmp_save
+2024-05-03 01:12:01,515 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\system.tmp
+2024-05-03 01:12:01,547 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\stm32c0xx_hal_conf.h_save
+2024-05-03 01:12:01,696 [INFO] CodeEngine:335 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\stm32c0xx_hal_conf.h
+2024-05-03 01:12:01,721 [WARN] IPConfigManager:2946 - Warning: the RefConfig RCC_ConfigVoltageScaling is not available in your config.xml file
+2024-05-03 01:12:01,723 [WARN] IPConfigManager:2946 - Warning: the RefConfig RCC_PClockConfig is not available in your config.xml file
+2024-05-03 01:12:01,724 [WARN] IPConfigManager:2946 - Warning: the RefConfig RCC_interrupt_Time_SYSTICK_Config is not available in your config.xml file
+2024-05-03 01:12:01,728 [WARN] IPConfigManager:3440 - IP not found : TIM
+2024-05-03 01:12:01,729 [WARN] CodeGenerator:3939 - IP not found : null
+2024-05-03 01:12:01,758 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\main.h_save
+2024-05-03 01:12:01,895 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\main.h
+2024-05-03 01:12:01,920 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\main.c_save
+2024-05-03 01:12:02,067 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\main.c
+2024-05-03 01:12:02,652 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 135mS.
+2024-05-03 01:12:02,656 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-05-03 01:12:02,860 [INFO] ConfigFileManager:1495 - The Die is : DIE453
+2024-05-03 01:12:04,335 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1678mS.
+2024-05-03 01:12:04,336 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-05-03 01:12:04,338 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-05-03 01:15:25,251 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 679224328 Bytes (1073741824)
+2024-05-03 01:15:25,342 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 690978304 Bytes (1073741824)
+2024-05-03 01:15:25,784 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 718547976 Bytes (1073741824)
+2024-05-03 01:15:26,125 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-03 01:15:26,125 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-05-03 01:15:26,125 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8C0
+2024-05-03 01:15:26,125 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-03 01:15:26,125 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DEBUG
+2024-05-03 01:15:26,125 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-03 01:15:26,125 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-03 01:15:26,125 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-05-03 01:15:26,127 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-05-03 01:15:26,155 [WARN] IP:2119 - FIFOMode not found: check if there is a RefParameter without a condition.
+2024-05-03 01:15:26,155 [WARN] IP:2119 - TXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2024-05-03 01:15:26,155 [WARN] IP:2119 - RXFIFOThreshold not found: check if there is a RefParameter without a condition.
+2024-05-03 01:15:26,155 [WARN] IP:2119 - AutoBaudRateEnableParam not found: check if there is a RefParameter without a condition.
+2024-05-03 01:15:26,316 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\license.tmp_save
+2024-05-03 01:15:26,397 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\license.tmp
+2024-05-03 01:15:26,426 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\gpio.tmp_save
+2024-05-03 01:15:26,540 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\gpio.tmp
+2024-05-03 01:15:26,573 [WARN] IPConfigManager:99 - WARNING: Missing Config File for DEBUG ip!!
+2024-05-03 01:15:26,807 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\cortex.tmp_save
+2024-05-03 01:15:26,922 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\cortex.tmp
+2024-05-03 01:15:26,948 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\stm32c0xx_it.c_save
+2024-05-03 01:15:27,056 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\stm32c0xx_it.c
+2024-05-03 01:15:27,061 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\stm32c0xx_it.h_save
+2024-05-03 01:15:27,105 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\stm32c0xx_it.h
+2024-05-03 01:15:27,150 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\stm32c0xx_hal_msp.c_save
+2024-05-03 01:15:27,315 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\stm32c0xx_hal_msp.c
+2024-05-03 01:15:27,321 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\system.tmp_save
+2024-05-03 01:15:27,365 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\MXTmpFiles\system.tmp
+2024-05-03 01:15:27,392 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\stm32c0xx_hal_conf.h_save
+2024-05-03 01:15:27,524 [INFO] CodeEngine:335 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\stm32c0xx_hal_conf.h
+2024-05-03 01:15:27,551 [WARN] IPConfigManager:2946 - Warning: the RefConfig RCC_ConfigVoltageScaling is not available in your config.xml file
+2024-05-03 01:15:27,554 [WARN] IPConfigManager:2946 - Warning: the RefConfig RCC_PClockConfig is not available in your config.xml file
+2024-05-03 01:15:27,554 [WARN] IPConfigManager:2946 - Warning: the RefConfig RCC_interrupt_Time_SYSTICK_Config is not available in your config.xml file
+2024-05-03 01:15:27,561 [WARN] IPConfigManager:3440 - IP not found : TIM
+2024-05-03 01:15:27,562 [WARN] CodeGenerator:3939 - IP not found : null
+2024-05-03 01:15:27,587 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\main.h_save
+2024-05-03 01:15:27,752 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Inc\main.h
+2024-05-03 01:15:27,775 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\main.c_save
+2024-05-03 01:15:27,979 [INFO] CodeEngine:279 - Generated code: C:\Users\choua\STM32CubeIDE\MakeCutter_ST\servo_lib_test\Core\Src\main.c
+2024-05-03 01:15:28,436 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 118mS.
+2024-05-03 01:15:28,440 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-05-03 01:15:28,701 [INFO] ConfigFileManager:1495 - The Die is : DIE453
+2024-05-03 01:15:30,134 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1694mS.
+2024-05-03 01:15:30,135 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-05-03 01:15:30,140 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-05-03 02:09:52,807 [INFO] Activator:176 - 
 
 
-2024-05-02 16:03:01,046 [INFO] Activator:177 - !SESSION log4j initialized
-2024-05-02 16:03:08,677 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-05-03 02:09:52,809 [INFO] Activator:177 - !SESSION log4j initialized
+2024-05-03 02:10:00,246 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
