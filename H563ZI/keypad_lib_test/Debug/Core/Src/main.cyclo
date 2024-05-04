@@ -10,6 +10,6 @@ C:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL
 ../Core/Src/main.c:442:13:MX_UCPD1_Init	1
 ../Core/Src/main.c:478:13:MX_USB_PCD_Init	2
 ../Core/Src/main.c:514:13:MX_GPIO_Init	1
-../Core/Src/main.c:575:6:HAL_GPIO_EXTI_Rising_Callback	1
-../Core/Src/main.c:582:6:HAL_GPIO_EXTI_Falling_Callback	1
-../Core/Src/main.c:593:6:Error_Handler	1
+../Core/Src/main.c:575:6:HAL_GPIO_EXTI_Rising_Callback	2
+../Core/Src/main.c:584:6:HAL_GPIO_EXTI_Falling_Callback	2
+../Core/Src/main.c:597:6:Error_Handler	1

@@ -332,3 +332,54 @@ arm-none-eabi-size  keypad_lib_test.elf
   43372	     68	   3180	  46620	   b61c	keypad_lib_test.elf
 Finished building: default.size.stdout
  
+04:31:19 **** Incremental Build of configuration Debug for project keypad_lib_test ****
+make -j12 all 
+arm-none-eabi-size  keypad_lib_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43372	     68	   3180	  46620	   b61c	keypad_lib_test.elf
+Finished building: default.size.stdout
+ 
+04:31:43 **** Incremental Build of configuration Debug for project keypad_lib_test ****
+make -j12 all 
+arm-none-eabi-size  keypad_lib_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43372	     68	   3180	  46620	   b61c	keypad_lib_test.elf
+Finished building: default.size.stdout
+ 
+04:36:42 **** Incremental Build of configuration Debug for project keypad_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h5xx_hal_msp.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32h5xx_hal_msp.d" -MT"Core/Src/stm32h5xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h5xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h5xx_it.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32h5xx_it.d" -MT"Core/Src/stm32h5xx_it.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h5xx_it.o"
+arm-none-eabi-gcc -o "keypad_lib_test.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\keypad_lib_test\STM32H563ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="keypad_lib_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: keypad_lib_test.elf
+ 
+arm-none-eabi-size  keypad_lib_test.elf 
+arm-none-eabi-objdump -h -S keypad_lib_test.elf  > "keypad_lib_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  43372	     68	   3180	  46620	   b61c	keypad_lib_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: keypad_lib_test.list
+ 
+04:41:33 **** Incremental Build of configuration Debug for project keypad_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "keypad_lib_test.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\keypad_lib_test\STM32H563ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="keypad_lib_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: keypad_lib_test.elf
+ 
+arm-none-eabi-size  keypad_lib_test.elf 
+arm-none-eabi-objdump -h -S keypad_lib_test.elf  > "keypad_lib_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  43388	     68	   3180	  46636	   b62c	keypad_lib_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: keypad_lib_test.list
+ 
+04:47:27 **** Incremental Build of configuration Debug for project keypad_lib_test ****
+make -j12 all 
+arm-none-eabi-size  keypad_lib_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43388	     68	   3180	  46636	   b62c	keypad_lib_test.elf
+Finished building: default.size.stdout
+ 

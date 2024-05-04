@@ -90,8 +90,6 @@ void Error_Handler(void);
 #define RMII_TXD1_GPIO_Port GPIOB
 #define UCPD_FLT_Pin GPIO_PIN_7
 #define UCPD_FLT_GPIO_Port GPIOG
-#define UCPD_DBn_Pin GPIO_PIN_9
-#define UCPD_DBn_GPIO_Port GPIOA
 #define USB_FS_N_Pin GPIO_PIN_11
 #define USB_FS_N_GPIO_Port GPIOA
 #define USB_FS_P_Pin GPIO_PIN_12

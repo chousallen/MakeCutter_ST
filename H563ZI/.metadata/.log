@@ -540,3 +540,6 @@ java.lang.Exception: Project 'servo_test' is not open.
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY org.eclipse.debug.core 4 5012 2024-05-05 05:04:00.583
+!MESSAGE Launch configuration keypad_lib_test Debug at file:/C:/Users/choua/STM32CubeIDE/MakeCutter_ST/H563ZI/keypad_lib_test/keypad_lib_test%20Debug.launch does not exist.

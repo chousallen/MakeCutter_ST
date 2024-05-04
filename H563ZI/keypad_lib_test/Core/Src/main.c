@@ -574,6 +574,8 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin)
 {
+	if(GPIO_Pin == 4)
+		return;
 	rise_pin = GPIO_Pin;
 	Keypad_Rising_EXTI(&myKB, GPIO_Pin);
 
@@ -581,6 +583,8 @@ void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin)
 
 void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin)
 {
+	if(GPIO_Pin == 4)
+		return;
 	fall_pin = GPIO_Pin;
 	Keypad_Rising_EXTI(&myKB, GPIO_Pin);
 }
