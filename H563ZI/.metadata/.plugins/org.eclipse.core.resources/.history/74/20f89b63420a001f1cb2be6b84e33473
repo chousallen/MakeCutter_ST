@@ -1,0 +1,14 @@
+/*
+ * keypad.c
+ *
+ *  Created on: May 5, 2024
+ *      Author: choua
+ */
+
+#include "stm32h5xx.h"
+#include "keypad.h"
+
+void Keypad_Start(Keypad *kb, GPIO_TypeDef* *_RowPorts, GPIO_TypeDef* *_ColPorts, uint16_t *_RowPins, uint16_t *_ColPins)
+{
+	kb->RowPorts =
+}

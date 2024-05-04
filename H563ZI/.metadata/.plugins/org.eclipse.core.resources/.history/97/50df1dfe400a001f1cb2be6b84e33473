@@ -1,0 +1,26 @@
+/*
+ * keypad.h
+ *
+ *  Created on: May 5, 2024
+ *      Author: choua
+ */
+
+#ifndef INC_KEYPAD_H_
+#define INC_KEYPAD_H_
+
+#include "stm32h5xx.h"
+
+typedef struct
+{
+	GPIO_TypeDef* *RowPorts;
+	GPIO_TypeDef* *ColPorts;
+	uint16_t *RowPins;
+	uint16_t *ColPins;
+}Keypad;
+
+void Keypad_Start(GPIO_TypeDef* *RowPorts, GPIO_TypeDef* *ColPorts, uint16_t *RowPins, uint16_t *ColPins);
+//write high
+
+void Keypad_RISING_EXTI(uint16_t GPIO_Pin);
+//column is known, pull row low
+#endif /* INC_KEYPAD_H_ */

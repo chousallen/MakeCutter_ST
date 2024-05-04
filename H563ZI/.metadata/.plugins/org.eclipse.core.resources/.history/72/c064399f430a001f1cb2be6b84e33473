@@ -1,0 +1,48 @@
+/*
+ * keypad.c
+ *
+ *  Created on: May 5, 2024
+ *      Author: choua
+ */
+
+#include "stm32h5xx.h"
+#include "keypad.h"
+#include <stdbool.h>
+
+extern uint8_t Last_Key_Down[1];
+
+void Keypad_Start(Keypad *kb, GPIO_TypeDef* *_RowPorts, GPIO_TypeDef* *_ColPorts, uint16_t *_RowPins, uint16_t *_ColPins)
+{
+	kb->RowPorts = _RowPorts;
+	kb->ColPorts = _ColPorts;
+	kb->RowPins = _RowPins;
+	kb->ColPins = _ColPins;
+	kb->rising_pin = 255;
+	Last_Key_Down[1] = 0;
+
+	HAL_GPIO_WritePin(kb->RowPorts[0], kb->RowPins[0], SET);
+	HAL_GPIO_WritePin(kb->RowPorts[1], kb->RowPins[1], SET);
+	HAL_GPIO_WritePin(kb->RowPorts[2], kb->RowPins[2], SET);
+	HAL_GPIO_WritePin(kb->RowPorts[3], kb->RowPins[3], SET);
+}
+
+void Keypad_Rising_EXTI(Keypad *kb, uint16_t GPIO_Pin)
+{
+	switch (GPIO_Pin) {
+		case kb->ColPins[0]:
+			kb->rising_pin = 0;
+			break;
+		case kb->ColPins[1]:
+			kb->rising_pin = 1;
+			break;
+		case kb->ColPins[2]:
+			kb->rising_pin = 2;
+			break;
+		case kb->ColPins[3]:
+			kb->rising_pin = 3;
+			break;
+		default:
+			return;
+			break;
+	}
+}

@@ -1,0 +1,7 @@
+../Core/Src/servo.c:16:6:SERVO_INIT	16	static
+../Core/Src/servo.c:22:6:SERVO_SET_TIM	16	static
+../Core/Src/servo.c:27:6:SERVO_SET_DUTY_CYCLE	16	static
+../Core/Src/servo.c:33:20:SERVO_GET_TIMER	4	static
+../Core/Src/servo.c:38:6:Servo_Start	16	static
+../Core/Src/servo.c:44:6:Servo_Stop	16	static
+../Core/Src/servo.c:49:6:Servo_Write	16	static

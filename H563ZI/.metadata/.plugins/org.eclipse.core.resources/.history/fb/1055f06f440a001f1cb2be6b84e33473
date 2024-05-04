@@ -1,0 +1,37 @@
+/*
+ * keypad.h
+ *
+ *  Created on: May 5, 2024
+ *      Author: choua
+ */
+
+#ifndef INC_KEYPAD_H_
+#define INC_KEYPAD_H_
+
+#include "stm32h5xx.h"
+#include <stdbool.h>
+
+uint8_t Last_Key_Down[1];
+
+typedef struct
+{
+	GPIO_TypeDef* *RowPorts;
+	GPIO_TypeDef* *ColPorts;
+	uint16_t *RowPins;
+	uint16_t *ColPins;
+	uint8_t rising_pin;
+	uint8_t **keys;
+	bool key_down;
+}Keypad;
+
+void Keypad_Start(Keypad *kb, GPIO_TypeDef* *RowPorts, GPIO_TypeDef* *ColPorts, uint16_t *RowPins, uint16_t *ColPins, uint8_t **keys);
+//write high
+
+void Keypad_Rising_EXTI(Keypad *kb, uint16_t GPIO_Pin);
+//column is known, assign to rising pin, pull row low
+
+void Keypad_Falling_EXTI(Keypad *kb,uint16_t GPIO_Pin);
+//check if same as last rising exti pin
+
+
+#endif /* INC_KEYPAD_H_ */
