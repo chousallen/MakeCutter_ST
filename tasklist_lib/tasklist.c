@@ -7,15 +7,19 @@
 
 #include "tasklist.h"
 
-
-bool TaskList_Enqueue(TaskQueue* queue, bool isTrim, bool isCrimp, uint16_t lenght, uint8_t quantity){
+void TaskList_Init(TaskQueue* queue){
+    queue->headInd = 0;
+    queue->tailInd = 0;
+    queue->qsize = 0;
+}
+bool TaskList_Enqueue(TaskQueue* queue, bool isTrim, bool isCrimp, uint16_t length, uint8_t quantity){
     if (queue->qsize >= MAXTASK){
         return false;
     }
     Task temp;
     temp.trim = isTrim;
     temp.crimp = isCrimp;
-    temp.length = lenght;
+    temp.length = length;
     temp.qty = quantity;
     queue->Queue[queue->tailInd] =temp;
     queue->qsize++;
@@ -48,3 +52,4 @@ bool TaskList_isEmpty(TaskQueue* queue){
 const Task* TaskList_Peek(TaskQueue* queue){
     return &(queue->Queue[queue->headInd]);
 }
+

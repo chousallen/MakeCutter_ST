@@ -25,8 +25,8 @@ typedef struct TaskQueue{
 	uint8_t tailInd;
 	uint8_t qsize;
 }TaskQueue;
-
-bool TaskList_Enqueue(TaskQueue* queue, bool isTrim, bool isCrimp, uint16_t lenght, uint8_t quantity);
+void TaskList_Init(TaskQueue* queue);
+bool TaskList_Enqueue(TaskQueue* queue, bool isTrim, bool isCrimp, uint16_t length, uint8_t quantity);
 Task TaskList_Dequeue(TaskQueue* queue);
 const Task* TaskList_Peek(TaskQueue* queue);
 bool TaskList_isEmpty(TaskQueue* queue);
