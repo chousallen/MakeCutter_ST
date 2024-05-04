@@ -1,0 +1,27 @@
+/*
+ * servo.h
+ *
+ *  Created on: May 4, 2024
+ *      Author: choua
+ */
+
+#ifndef INC_SERVO_H_
+#define INC_SERVO_H_
+
+#include "stm32c0xx_hal.h"
+
+uint16_t denomi;
+TIM_HandleTypeDef *htim;
+
+typedef struct
+{
+	uint16_t numera;
+	uint32_t channel;
+
+}servo;
+
+void SERVO_INIT(TIM_HandleTypeDef *htim, uint16_t cycle);
+void SERVO_SET_TIM(TIM_HandleTypeDef *htim);
+void SERVO_SET_DUTY_CYCLE(uint16_t cycle);
+
+#endif /* INC_SERVO_H_ */

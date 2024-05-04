@@ -1,0 +1,21 @@
+/*
+ * servo.c
+ *
+ *  Created on: May 4, 2024
+ *      Author: choua
+ */
+
+#include "servo.h"
+#include "stm32c0xx_hal.h"
+
+extern uint16_t denomi;
+extern TIM_HandleTypeDef *htim;
+
+void SERVO_INIT(TIM_HandleTypeDef *_htim, uint16_t cycle)
+{
+}
+
+void SERVO_SET_TIM(TIM_HandleTypeDef *_htim)
+{
+	htim = _htim;
+}

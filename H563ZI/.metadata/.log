@@ -1,0 +1,27 @@
+!SESSION 2024-05-04 21:53:20.284 -----------------------------------------------
+eclipse.buildId=Version 1.14.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-04 21:53:26.561
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-04 21:53:26.575
+!MESSAGE Log4j2 initialized with config file C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-04 21:53:29.556
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-04 21:55:28.458
+!MESSAGE Indexed 'h563zi' (34 sources, 105 headers) in 6.1 sec: 13,379 declarations; 98,574 references; 1 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0018%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-04 21:56:12.798
+!MESSAGE Indexed 'exti_test' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-04 22:21:45.497
+!MESSAGE Indexed 'exti_test_2' (34 sources, 107 headers) in 3.39 sec: 13,535 declarations; 98,713 references; 0 unresolved inclusions; 3 syntax errors; 2 unresolved names (0.0018%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-04 22:28:43.164
+!MESSAGE Indexed 'stepper_lib_test' (34 sources, 107 headers) in 5.06 sec: 13,535 declarations; 98,713 references; 0 unresolved inclusions; 3 syntax errors; 2 unresolved names (0.0018%)

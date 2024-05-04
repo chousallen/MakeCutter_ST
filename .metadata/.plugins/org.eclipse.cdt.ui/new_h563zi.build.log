@@ -1,0 +1,10 @@
+21:48:38 **** Incremental Build of configuration Debug for project new_h563zi ****
+make -j12 all 
+arm-none-eabi-size  new_h563zi.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40824	     20	   3028	  43872	   ab60	new_h563zi.elf
+Finished building: default.size.stdout
+ 
+
+21:48:39 Build Finished. 0 errors, 0 warnings. (took 325ms)
+

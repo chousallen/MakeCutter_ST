@@ -1,0 +1,57 @@
+/*
+ * servo.c
+ *
+ *  Created on: May 4, 2024
+ *      Author: choua
+ */
+
+#include "servo.h"
+#include "stm32c0xx_hal.h"
+#include <stdbool.h>
+
+uint16_t denomi;
+TIM_HandleTypeDef *htim;
+
+
+void SERVO_INIT(TIM_HandleTypeDef *_htim, uint16_t cycle)
+{
+	SERVO_SET_TIM(_htim);
+	SERVO_SET_DUTY_CYCLE(cycle);
+}
+
+void SERVO_SET_TIM(TIM_HandleTypeDef *_htim)
+{
+	htim = _htim;
+}
+
+void SERVO_SET_DUTY_CYCLE(uint16_t cycle)
+{
+	denomi = cycle;
+	__HAL_TIM_SET_AUTORELOAD(htim, denomi);
+}
+
+TIM_HandleTypeDef* void SERVO_GET_TIMER()
+{
+	return htim;
+}
+
+void Servo_Start(Servo *motor, uint32_t _channel)
+{
+	HAL_TIM_PWM_Start(htim, motor->channel);
+}
+
+void Servo_Stop(Servo *motor)
+{
+	HAL_TIM_PWM_Stop(htim, motor->channel);
+}
+
+bool Servo_Write(Servo *motor, uint16_t val)
+{
+	if(val >= denomi)
+		return false;
+	motor->numera = val;
+	__HAL_TIM_SET_COMPARE(htim, motor->channel, val);
+	return true;
+
+}
+

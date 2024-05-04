@@ -1,1 +1,9 @@
-cnt14
+pwm1
+pwm2
+&htim1
+myServo1
+myServo2
+TIM_CHANNEL_1
+TIM_CHANNEL_2
+htim1
+x

@@ -1,0 +1,215 @@
+23:05:22 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stepper_lib_test.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\stepper_lib_test\STM32H563ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_lib_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_lib_test.elf
+ 
+arm-none-eabi-size  stepper_lib_test.elf 
+arm-none-eabi-objdump -h -S stepper_lib_test.elf  > "stepper_lib_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  42828	     52	   3404	  46284	   b4cc	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_lib_test.list
+ 
+23:05:51 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-size  stepper_lib_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  42828	     52	   3404	  46284	   b4cc	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+23:21:00 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:557:20: error: 'cnt14' undeclared (first use in this function)
+  557 |                 if(cnt14 < 10000000)
+      |                    ^~~~~
+../Core/Src/main.c:557:20: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:562:36: error: 'stepper' undeclared (first use in this function); did you mean 'Stepper1'?
+  562 |                 if(!Stepper_Empty(&stepper))
+      |                                    ^~~~~~~
+      |                                    Stepper1
+../Core/Src/main.c:566:33: error: 'checkpoint' undeclared (first use in this function)
+  566 |                                 checkpoint = 10-checkpoint;
+      |                                 ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+23:22:36 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:565:28: error: 'stepper' undeclared (first use in this function); did you mean 'Stepper1'?
+  565 |                         if(stepper.time >= Stepper_Current_Interval(&stepper))
+      |                            ^~~~~~~
+      |                            Stepper1
+../Core/Src/main.c:565:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+23:22:57 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:565:71: error: 'stepper' undeclared (first use in this function); did you mean 'Stepper1'?
+  565 |                         if(Stepper1.time >= Stepper_Current_Interval(&stepper))
+      |                                                                       ^~~~~~~
+      |                                                                       Stepper1
+../Core/Src/main.c:565:71: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+23:23:13 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:568:54: error: 'stepper' undeclared (first use in this function); did you mean 'Stepper1'?
+  568 |                                 Stepper_Go_One_Step(&stepper);
+      |                                                      ^~~~~~~
+      |                                                      Stepper1
+../Core/Src/main.c:568:54: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+23:23:32 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:569:33: error: 'stepper' undeclared (first use in this function); did you mean 'Stepper1'?
+  569 |                                 stepper.time = 0;
+      |                                 ^~~~~~~
+      |                                 Stepper1
+../Core/Src/main.c:569:33: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+23:23:48 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:573:33: error: 'stepper' undeclared (first use in this function); did you mean 'Stepper1'?
+  573 |                                 stepper.time += 100;
+      |                                 ^~~~~~~
+      |                                 Stepper1
+../Core/Src/main.c:573:33: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+23:23:57 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stepper_lib_test.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\stepper_lib_test\STM32H563ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_lib_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_lib_test.elf
+ 
+arm-none-eabi-size  stepper_lib_test.elf 
+arm-none-eabi-objdump -h -S stepper_lib_test.elf  > "stepper_lib_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  42828	     52	   3404	  46284	   b4cc	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_lib_test.list
+ 
+23:28:15 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-size  stepper_lib_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  42828	     52	   3404	  46284	   b4cc	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+23:29:35 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stepper_lib_test.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\stepper_lib_test\STM32H563ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_lib_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_lib_test.elf
+ 
+arm-none-eabi-size  stepper_lib_test.elf 
+arm-none-eabi-objdump -h -S stepper_lib_test.elf  > "stepper_lib_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  43184	     52	   3404	  46640	   b630	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_lib_test.list
+ 
+23:34:58 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-size  stepper_lib_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43184	     52	   3404	  46640	   b630	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+23:36:26 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h5xx_hal_msp.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32h5xx_hal_msp.d" -MT"Core/Src/stm32h5xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h5xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h5xx_it.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32h5xx_it.d" -MT"Core/Src/stm32h5xx_it.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h5xx_it.o"
+arm-none-eabi-gcc -o "stepper_lib_test.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\stepper_lib_test\STM32H563ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_lib_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_lib_test.elf
+ 
+arm-none-eabi-size  stepper_lib_test.elf 
+arm-none-eabi-objdump -h -S stepper_lib_test.elf  > "stepper_lib_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  44476	     52	   3412	  47940	   bb44	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_lib_test.list
+ 
+23:36:48 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-size  stepper_lib_test.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44476	     52	   3412	  47940	   bb44	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+23:38:23 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stepper_lib_test.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\stepper_lib_test\STM32H563ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_lib_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_lib_test.elf
+ 
+arm-none-eabi-size  stepper_lib_test.elf 
+arm-none-eabi-objdump -h -S stepper_lib_test.elf  > "stepper_lib_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  44744	     52	   3412	  48208	   bc50	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_lib_test.list
+ 
+23:43:10 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stepper_lib_test.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\stepper_lib_test\STM32H563ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_lib_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_lib_test.elf
+ 
+arm-none-eabi-size  stepper_lib_test.elf 
+arm-none-eabi-objdump -h -S stepper_lib_test.elf  > "stepper_lib_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  44744	     52	   3412	  48208	   bc50	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_lib_test.list
+ 
+23:53:28 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "stepper_lib_test.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\stepper_lib_test\STM32H563ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_lib_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_lib_test.elf
+ 
+arm-none-eabi-size  stepper_lib_test.elf 
+arm-none-eabi-objdump -h -S stepper_lib_test.elf  > "stepper_lib_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  44796	     52	   3420	  48268	   bc8c	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_lib_test.list
+ 
+23:59:01 **** Incremental Build of configuration Debug for project stepper_lib_test ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stepper_motor.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32H563xx -c -I../Core/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Device/ST/STM32H5xx/Include -IC:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stepper_motor.d" -MT"Core/Src/stepper_motor.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stepper_motor.o"
+arm-none-eabi-gcc -o "stepper_lib_test.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\Users\choua\STM32CubeIDE\MakeCutter_ST\H563ZI\stepper_lib_test\STM32H563ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stepper_lib_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stepper_lib_test.elf
+ 
+arm-none-eabi-size  stepper_lib_test.elf 
+arm-none-eabi-objdump -h -S stepper_lib_test.elf  > "stepper_lib_test.list"
+   text	   data	    bss	    dec	    hex	filename
+  44796	     52	   3420	  48268	   bc8c	stepper_lib_test.elf
+Finished building: default.size.stdout
+ 
+Finished building: stepper_lib_test.list
+ 

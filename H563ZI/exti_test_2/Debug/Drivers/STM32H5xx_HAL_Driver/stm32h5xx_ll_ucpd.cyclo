@@ -1,0 +1,8 @@
+C:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/stm32h5xx_ll_ucpd.h:358:22:LL_UCPD_Disable	1
+C:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/stm32h5xx_ll_bus.h:1524:22:LL_APB1_GRP2_EnableClock	1
+C:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/stm32h5xx_ll_bus.h:1706:22:LL_APB1_GRP2_DisableClock	1
+C:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/stm32h5xx_ll_bus.h:1793:22:LL_APB1_GRP2_ForceReset	1
+C:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Inc/stm32h5xx_ll_bus.h:1880:22:LL_APB1_GRP2_ReleaseReset	1
+C:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_ll_ucpd.c:79:13:LL_UCPD_DeInit	2
+C:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_ll_ucpd.c:115:13:LL_UCPD_Init	2
+C:/Users/choua/STM32Cube/Repository/STM32Cube_FW_H5_V1.1.1/Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_ll_ucpd.c:143:6:LL_UCPD_StructInit	1
