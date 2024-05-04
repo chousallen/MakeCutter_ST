@@ -1,0 +1,10 @@
+../Core/Src/stepper_motor.c:13:6:Stepper_Init	32	static
+../Core/Src/stepper_motor.c:36:6:Stepper_Set_StepReso	16	static
+../Core/Src/stepper_motor.c:73:6:Stepper_Add_Task	24	static
+../Core/Src/stepper_motor.c:84:6:Stepper_Add_Steps	24	static
+../Core/Src/stepper_motor.c:93:6:Stepper_Empty	16	static
+../Core/Src/stepper_motor.c:98:11:Stepper_Get_Task	40	static
+../Core/Src/stepper_motor.c:112:11:Stepper_Peek_Task	24	static
+../Core/Src/stepper_motor.c:122:6:Stepper_Pop_Task	16	static
+../Core/Src/stepper_motor.c:131:14:Stepper_Current_Interval	16	static
+../Core/Src/stepper_motor.c:138:6:Stepper_Go_One_Step	24	static

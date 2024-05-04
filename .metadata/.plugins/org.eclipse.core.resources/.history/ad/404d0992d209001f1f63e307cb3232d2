@@ -1,0 +1,200 @@
+/*
+ * stepper_motor.c
+ *
+ *  Created on: May 4, 2024
+ *      Author: choua
+ */
+
+#include "stepper_motor.h"
+#include "stm32c0xx_hal.h"
+#include <stdbool.h>
+
+TIM_HandleTypeDef htim14;
+#define DEFAULT_INTERVAL 1000
+#define QUEUE_SIZE 32
+
+typedef enum
+{
+	FULL,
+	HALF,
+	QUARTER,
+	EIGHTH,
+	SIXTEENTH
+}Microstep;
+
+typedef struct
+{
+	int steps; //how many steps
+	unsigned int interval; //the interval between steps in micro seconds
+}Step_Task;
+
+typedef struct
+{
+	//Ports and Pins
+	GPIO_TypeDef* STEP_PORT;
+	uint16_t STEP_PIN;
+	GPIO_TypeDef* DIR_PORT;
+	uint16_t DIR_PIN;
+	GPIO_TypeDef* MS_PORT[3]; //MS1, MS2, MS3
+	uint16_t MS_PIN[3];
+
+	//Task Queue
+	Step_Task Task_Queue[QUEUE_SIZE];
+	unsigned short index_shift;
+	unsigned short size;
+
+	unsigned int time; //the time after last step in microseconds
+	//bool status; //the HIGH/LOW of step pin
+}Stepper_Motor;
+
+void Stepper_Init(Stepper_Motor* motor, GPIO_TypeDef* step_port, uint16_t step_pin, GPIO_TypeDef* dir_port, uint16_t dir_pin,
+					GPIO_TypeDef* *ms_port, uint16_t *ms_pin, Microstep step_reso)
+{
+	motor->STEP_PORT = step_port;
+	motor->STEP_PIN = step_pin;
+	motor->DIR_PORT = dir_port;
+	motor->DIR_PIN = dir_pin;
+	for(int i=0; i<3; i++)
+	{
+		motor->MS_PORT[i] = ms_port[i];
+		motor->MS_PIN[i] = ms_pin[i];
+	}
+	HAL_GPIO_WritePin(motor->STEP_PORT, motor->STEP_PIN, RESET);
+	HAL_GPIO_WritePin(motor->DIR_PORT, motor->DIR_PIN, SET);
+
+	Stepper_Set_StepReso(motor, step_reso);
+
+	motor->index_shift = 0;
+	motor->size = 0;
+	motor->time = 1000000; //1 second
+	//motor->status = 0;
+}
+
+void Stepper_Set_SepReso(Stepper_Motor *motor, Microstep step_reso)
+{
+	switch(step_reso)
+		{
+			case FULL:
+				HAL_GPIO_WritePin(motor->MS_PORT[0], motor->MS_PIN[0], RESET);
+				HAL_GPIO_WritePin(motor->MS_PORT[1], motor->MS_PIN[1], RESET);
+				HAL_GPIO_WritePin(motor->MS_PORT[2], motor->MS_PIN[2], RESET);
+				break;
+			case HALF:
+				HAL_GPIO_WritePin(motor->MS_PORT[0], motor->MS_PIN[0], SET);
+				HAL_GPIO_WritePin(motor->MS_PORT[1], motor->MS_PIN[1], RESET);
+				HAL_GPIO_WritePin(motor->MS_PORT[2], motor->MS_PIN[2], RESET);
+				break;
+			case QUARTER:
+				HAL_GPIO_WritePin(motor->MS_PORT[0], motor->MS_PIN[0], RESET);
+				HAL_GPIO_WritePin(motor->MS_PORT[1], motor->MS_PIN[1], SET);
+				HAL_GPIO_WritePin(motor->MS_PORT[2], motor->MS_PIN[2], RESET);
+				break;
+			case EIGHTH:
+				HAL_GPIO_WritePin(motor->MS_PORT[0], motor->MS_PIN[0], SET);
+				HAL_GPIO_WritePin(motor->MS_PORT[1], motor->MS_PIN[1], SET);
+				HAL_GPIO_WritePin(motor->MS_PORT[2], motor->MS_PIN[2], RESET);
+				break;
+			case SIXTEENTH:
+				HAL_GPIO_WritePin(motor->MS_PORT[0], motor->MS_PIN[0], SET);
+				HAL_GPIO_WritePin(motor->MS_PORT[1], motor->MS_PIN[1], SET);
+				HAL_GPIO_WritePin(motor->MS_PORT[2], motor->MS_PIN[2], SET);
+				break;
+			default:
+				HAL_GPIO_WritePin(motor->MS_PORT[0], motor->MS_PIN[0], RESET);
+				HAL_GPIO_WritePin(motor->MS_PORT[1], motor->MS_PIN[1], RESET);
+				HAL_GPIO_WritePin(motor->MS_PORT[2], motor->MS_PIN[2], RESET);
+				break;
+		}
+}
+
+bool Stepper_Add_Task(Stepper_Motor* motor, Step_Task insert)
+{
+	if(motor->size >= QUEUE_SIZE)
+	{
+		return false;
+	}
+	motor->size++;
+	motor->Task_Queue[(motor->size -1 +motor->index_shift)%QUEUE_SIZE] = insert;
+	return true;
+}
+
+bool Stepper_Add_Steps(Stepper_Motor* motor, unsigned int steps)
+{
+	if(motor->size >= QUEUE_SIZE)
+		return false;
+	Step_Task tmp = {steps, DEFAULT_INTERVAL};
+	Stepper_Add_Task(motor, tmp);
+	return true;
+}
+
+bool Stepper_Empty(Stepper_Motor* motor)
+{
+	return motor->size <= 0;
+}
+
+Step_Task Stepper_Get_Task(Stepper_Motor* motor)
+{
+	if(motor->size <= 0)
+	{
+		Step_Task tmp = {0, 0};
+		return tmp;
+	}
+	Step_Task tmp = motor->Task_Queue[motor->index_shift];
+	motor->size --;
+	motor->index_shift ++;
+	motor->index_shift %= QUEUE_SIZE;
+	return tmp;
+}
+
+Step_Task Stepper_Peek_Task(Stepper_Motor* motor)
+{
+	if(motor->size <= 0)
+	{
+		Step_Task tmp = {0, 0};
+		return tmp;
+	}
+	return motor->Task_Queue[motor->index_shift];
+}
+
+void Stepper_Pop_Task(Stepper_Motor* motor) //delete a task
+{
+	if(motor->size <= 0)
+		return;
+	motor->size --;
+	motor->index_shift ++;
+	motor->index_shift %= QUEUE_SIZE;
+}
+
+unsigned int Stepper_Current_Interval(Stepper_Motor* motor)
+{
+	if(motor->size <= 0)
+		return 0;
+	return motor->Task_Queue[motor->index_shift].interval;
+}
+
+bool Stepper_Go_One_Step(Stepper_Motor* motor)
+{
+	if(motor->size <= 0)
+		return false;
+	if(motor->Task_Queue[motor->index_shift].steps > 0)
+	{
+		HAL_GPIO_WritePin(motor->DIR_PORT, motor->DIR_PIN, SET);
+		motor->Task_Queue[motor->index_shift].steps --;
+	}
+	if(motor->Task_Queue[motor->index_shift].steps < 0)
+	{
+		HAL_GPIO_WritePin(motor->DIR_PORT, motor->DIR_PIN, RESET);
+		motor->Task_Queue[motor->index_shift].steps ++;
+	}
+	unsigned short t = __HAL_TIM_GET_COUNTER(&htim14);
+	HAL_GPIO_WritePin(motor->STEP_PORT, motor->STEP_PIN, SET);
+	if(motor->Task_Queue[motor->index_shift].steps == 0)
+	{
+		Stepper_Pop_Task(motor);
+	}
+	while(__HAL_TIM_GET_COUNTER(&htim14)-t <= 1 || t+__HAL_TIM_GET_COUNTER(&htim14) <= __HAL_TIM_GET_AUTORELOAD(&htim14))
+	{}
+	HAL_GPIO_WritePin(motor->STEP_PORT, motor->STEP_PIN, RESET);
+
+	return true;
+}
